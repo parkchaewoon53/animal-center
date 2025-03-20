@@ -54,6 +54,7 @@
     box-sizing: border-box;
     display: none;
     border-top: 2px solid #0f8563;
+    z-index: 1;
 }
 
 .dropdown-item {
