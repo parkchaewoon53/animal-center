@@ -119,7 +119,7 @@
     document.addEventListener("DOMContentLoaded", function () {
         var xhr = new XMLHttpRequest();
         var url = 'https://apis.data.go.kr/6300000/animalDaejeonService/animalDaejeonList';
-        var queryParams = '?' + encodeURIComponent('serviceKey') + '=' + 'AsKsksTbcdg8cukGUyiMQU%2FawtOq%2BcmyZvZBfGoOZHhAHXweFUxP2W1ysiSuZ6Yh%2Bnsh2KIOC%2FNQDron%2BV9iBQ%3D%3D';
+        var queryParams = '?serviceKey=AsKsksTbcdg8cukGUyiMQU%2FawtOq%2BcmyZvZBfGoOZHhAHXweFUxP2W1ysiSuZ6Yh%2Bnsh2KIOC%2FNQDron%2BV9iBQ%3D%3D';
         queryParams += '&' + encodeURIComponent('numOfRows') + '=' + encodeURIComponent('1000000');
         xhr.open('GET', url + queryParams);
 
@@ -145,7 +145,7 @@
                 drawBarChart(speciesCount);
                 drawPieChart(speciesCount);
                 drawLineChart(speciesCount);
-            } 
+            }
         };
 
         xhr.send();
@@ -250,11 +250,11 @@
 
             let canvasWidth = canvas.width;
             let canvasHeight = canvas.height;
-            console.log(canvasWidth);  
-            console.log(canvasHeight); 
+            console.log(canvasWidth);
+            console.log(canvasHeight);
 
             let imgHeight = canvasHeight * imgWidth / canvasWidth;
-            console.log(imgHeight);  
+            console.log(imgHeight);
             let x = 10;
             let y = 10;
             pdf.addImage(img, "PNG", x, y, imgWidth, imgHeight);
