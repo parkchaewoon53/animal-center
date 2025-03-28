@@ -3,7 +3,7 @@
 var xhr = new XMLHttpRequest();
 
 var url = 'http://apis.data.go.kr/6300000/animalDaejeonService/animalDaejeonList'; /*URL*/
-var queryParams = '?' + encodeURIComponent('serviceKey') + '=' + 'AsKsksTbcdg8cukGUyiMQU%2FawtOq%2BcmyZvZBfGoOZHhAHXweFUxP2W1ysiSuZ6Yh%2Bnsh2KIOC%2FNQDron%2BV9iBQ%3D%3D'; /*Service Key*/
+var queryParams = '?serviceKey=AsKsksTbcdg8cukGUyiMQU%2FawtOq%2BcmyZvZBfGoOZHhAHXweFUxP2W1ysiSuZ6Yh%2Bnsh2KIOC%2FNQDron%2BV9iBQ%3D%3D'; /*Service Key*/
 queryParams += '&' + encodeURIComponent('pageNo') + '=' + encodeURIComponent('1'); /**/
 queryParams += '&' + encodeURIComponent('numOfRows') + '=' + encodeURIComponent('5'); /**/
 queryParams += '&' + encodeURIComponent('searchCondition3') + '=' + encodeURIComponent('2'); /**/
@@ -46,4 +46,9 @@ function stateCd2Str(cd) {
     } else {
         return "주인반환"
     }
+}
+
+function goDetail() {
+    let regId = event.currentTarget.dataset["regId"];
+    open("./information-information.html?regId=" + regId);
 }

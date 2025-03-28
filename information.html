@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유기동물 보호 정보</title>
+    <link rel="stylesheet" href="./resources/css/mystyle.css">
+    <link rel="stylesheet" href="./resources/css/information.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navigation">
+            <a href="./index.html">
+                <img class="logo" src="./resources/img/로고.png" alt="">
+            </a>
+            <div class="menu-box">
+                <div class="menu">
+                    <a class="menu-title" href="./introduce.html">동물보호센터</a>
+                    <div class="dropdown">
+                        <a class="dropdown-item" href="./introduce.html">동물보호센터 소개</a>
+                        <a class="dropdown-item" href="./safeprocedure.html">유기동물 보호절차</a>
+                        <a class="dropdown-item" href="./comeload.html">오시는 길</a>
+                    </div>
+                </div>
+                <div class="menu">
+                    <a class="menu-title" href="./current.html">동물보호 정보</a>
+                    <div class="dropdown">
+                        <a class="dropdown-item" href="./current.html">유기동물 현황</a>
+                        <a class="dropdown-item" href="./information.html">유기동물 보호 정보</a>
+                        <a class="dropdown-item" href="./procedure.html">입양절차</a>
+                    </div>
+                </div>
+                <div class="menu">
+                    <a class="menu-title" href="./guide.html">반려생활 길잡이</a>
+                    <div class="dropdown">
+                        <a class="dropdown-item" href="./guide.html">반려생활 길잡이</a>
+                        <a class="dropdown-item" href="./restaurant.html">반려동물 출입 식당</a>
+                        <a class="dropdown-item" href="./qna.html">자주 묻는 질문</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="banner">
+            <img class="banner-img" src="./resources/img/배너.png" alt="">
+        </section>
+        <div class="middle1">
+            <div class="mini-menu">
+                <a class="deco" href="./current.html">
+                    <div class="mini-menu-1">동물보호 정보</div>
+                </a>
+                <div class="mini-menu-2"></div>
+                <a class="deco" href="./current.html">
+                    <div class="mini-menu-3">유기동물 현황</div>
+                </a>
+                <a class="deco" href="./information.html">
+                    <div class="mini-menu-4">유기동물 보호 정보</div>
+                </a>
+                <a class="deco" href="./procedure.html">
+                    <div class="mini-menu-5">입양절차</div>
+                </a>
+            </div>
+            <div class="container-container">
+                <div class="naming">유기동물 보호 정보 
+                    <button class="excelBtn" id="downloadExcelBtn">
+                        엑셀 다운로드
+                    </button>
+                </div>
+                <hr>
+                <div class="species-box-container">
+                    <div class="species-box">
+                        <div class="species-card" data-id="" data-value="">전체</div>
+                        <div class="species-card" data-id="searchCondition3Filter" data-value="2">입양가능</div>
+                        <div class="species-card" data-id="searchConditionFilter" data-value="1">개</div>
+                        <div class="species-card" data-id="searchConditionFilter" data-value="2">고양이</div>
+                        <div class="species-card" data-id="searchConditionFilter" data-value="3">기타동물</div>
+                    </div>
+                </div>
+                <div class="select-box">
+                    <div class="select-box-top">
+                        <div class="select-box-card-1">
+                            <div class="word-box">종류</div>
+                            <select class="select-menu" id="searchConditionFilter">
+                                <option value="">선택하세요</option>
+                                <option value="1">개</option>
+                                <option value="2">고양이</option>
+                                <option value="3">기타동물</option>
+                            </select>
+                        </div>
+                        <div class="select-box-card-2">
+                            <div class="word-box">상태</div>
+                            <select class="select-menu" id="searchCondition3Filter">
+                                <option value="">선택하세요</option>
+                                <option value="1">공고중</option>
+                                <option value="2">입양가능</option>
+                                <option value="3">입양예정</option>
+                                <option value="4">입양완료</option>
+                                <option value="7">주인반환</option>
+                            </select>
+                        </div>
+                        <div class="select-box-card-2">
+                            <div class="word-box">지역</div>
+                            <select class="select-menu" id="searchCondition2Filter">
+                                <option value="">선택하세요</option>
+                                <option value="1">동구</option>
+                                <option value="2">중구</option>
+                                <option value="3">서구</option>
+                                <option value="4">유성구</option>
+                                <option value="5">대덕구</option>
+                            </select>
+                        </div>
+                        <div class="select-box-card-3">
+                            <div class="word-box">성별</div>
+                            <select class="select-menu" id="gubunFilter">
+                                <option value="">선택하세요</option>
+                                <option value="1">암</option>
+                                <option value="2">수</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="select-box-bottom">
+                        <div class="word-box">검색</div>
+                        <select class="select-menu-1" id="searchType">
+                            <option value="species">품종</option>
+                            <option value="memo">기타사항</option>
+                            <option value="regId">관리번호</option>
+                            <option value="noticeNo">공고번호</option>
+                        </select>
+                        <input class="select-input" type="text" id="inputKeyword">
+                        <button class="select-button" id="searchBtn">검색</button>
+                    </div>
+                </div>
+                <div class="card-box"></div>
+                <div class="paging-box"></div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-top"></div>
+            <div class="footer-menu">
+                <a class="footer-menu-1"
+                    href="https://daejeon.go.kr/drh/DrhContentsHtmlView.do?menuSeq=2062">개인정보처리방침</a>
+                <span class="footer-menu-2">|</span>
+                <a class="footer-menu-2" href="https://daejeon.go.kr/drh/DrhContentsHtmlView.do?menuSeq=1757">영상정보처리기기
+                    운영·관리방침</a>
+                <span class="footer-menu-2">|</span>
+                <a class="footer-menu-2"
+                    href="https://daejeon.go.kr/drh/board/boardNormalList.do?boardId=homepage_0001&menuSeq=1507">누리집
+                    개선의견</a>
+                <span class="footer-menu-2">|</span>
+                <a class="footer-menu-2" href="./come-load">오시는 길</a>
+            </div>
+            <div class="footer-come">(34001) 대전광역시 유성구 금고길 7(금고동) 대전반려동물공원</div>
+            <div class="footer-come2">(34001) 대전광역시 유성구 금남구즉로 1234(금고동) 대전동물보호센터 / 대표전화 (042) 270-7239 / 팩스번호
+                (042)270-7224</div>
+            <div class="footer-menu-2">COPYRIGHT 2023 (c) DAEJEON METROPOLITAN CITY. ALL RIGHTS RESERVED.</div>
+        </footer>
+    </div>
+    <script src="./resources/js/information.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/x2js/1.2.0/xml2json.min.js"></script>
+</body>
+
+</html>

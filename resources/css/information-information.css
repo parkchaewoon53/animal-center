@@ -1,0 +1,109 @@
+.animal-box{
+    width: 60%;
+    height: 300px;
+    border: 8px solid #eeeeee;
+}
+
+.boxing-box{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.box-box{
+    justify-content: center;
+    display: flex;
+}
+
+.animal-box > img{
+    width: 100%;
+    height: 100%;
+}
+
+.animal-introduce-box{
+    width: 80%;
+    display: flex;
+    margin-bottom: 24px;
+    margin-top: 24px;
+}
+
+.animal-introduce-box-left{
+    background-color: #cccccc;
+    font-size: 16px;
+    font-weight: bold;
+    width: 20%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid #777777;
+}
+
+.animal-introduce{
+    height: 40px;
+    width: 100%;
+    padding-left: 8px;
+    border-bottom: 1px solid #777777;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.animal-introduce2{
+    width: 100%;
+    padding-left: 8px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+
+
+.animal-introduce-box-right{
+    width: 85%;
+    font-size: 16px;
+    color: #777777;
+    border-top: 1px solid black;
+}
+
+.animal-introduce-right{
+    width: 100%;
+    padding-left: 8px;
+    height: 40px;
+    border-bottom: 1px solid #777777;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.animal-introduce-right2{
+    width: 100%;
+    padding-left: 8px;
+    border-bottom: 1px solid #777777;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.menu-button-box {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: end;
+}
+
+.menu-button {
+    background-color: white;
+    border: 1px solid black;
+    width: 80px;
+    height: 30px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.menu-button:hover{
+    background-color: black;
+    color: white;
+}

@@ -1,3 +1,19 @@
+.mapping {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.mapping>iframe {
+    width: 100%;
+    height: 500px;
+    justify-content: center;
+    display: flex;
+
+}
+
 .img-introduce {
     height: 300px;
     margin-top: 20px;
@@ -6,17 +22,17 @@
 }
 
 .img-introduce-left {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     width: calc(100% / 6);
     height: 100%;
 }
 
 .img-introduce-left-1 {
-    height: calc(100% / 5);
+    height: calc(100% / 4);
     width: 100%;
     display: flex;
-    align-items: center;
+    padding-top: 12px;
     padding-left: 16px;
     box-sizing: border-box;
     border: 1px dashed black;
@@ -31,7 +47,7 @@
     align-items: center;
     padding-left: 16px;
     box-sizing: border-box;
-    
+
 }
 
 .img-introduce-left-3 {
@@ -47,11 +63,11 @@
 }
 
 .img-introduce-left-4 {
-    height: 60px;
+    height: calc(100% / 5);
     width: 100%;
     display: flex;
-    padding-top: 12px;
     padding-left: 16px;
+    align-items: center;
     box-sizing: border-box;
     border: 1px dashed black;
     border-left: none;
@@ -66,10 +82,9 @@
 }
 
 .img-introduce-right-1 {
-    height: calc(100% / 5);
+    height: 75px;
     width: 100%;
-    display: flex;
-    align-items: center;
+    padding-top: 12px;
     padding-left: 16px;
     box-sizing: border-box;
     border: 1px dashed #dcdcdc;
@@ -77,6 +92,16 @@
     border-right: none;
     font-weight: bold;
     color: #777777;
+}
+
+.img-introduce-right-1-top{
+    height: 25%;
+    width: 100%;
+}
+.img-introduce-right-1-bottom{
+    height: 25%;
+    width: 100%;
+    margin-top: 8px;
 }
 
 .img-introduce-right-2 {
@@ -88,6 +113,20 @@
     box-sizing: border-box;
     font-weight: bold;
     color: #777777;
+}
+
+.img-introduce-right-2-black {
+    font-weight: bold;
+    color: black;
+    padding-right: 4px;
+    display: inline-block;
+}
+
+.img-introduce-right-2-gray {
+    font-weight: bold;
+    color: #777777;
+    padding-right: 4px;
+    display: inline-block;
 }
 
 .img-introduce-right-3 {
@@ -105,28 +144,16 @@
 }
 
 .img-introduce-right-4 {
-    height: 60px;
+    height: calc(100% / 5);
     width: 100%;
     padding-left: 16px;
-    padding-top: 12px;
     box-sizing: border-box;
     border: 1px dashed #dcdcdc;
     border-left: none;
     border-right: none;
     border-top: none;
+    display: flex;
     align-items: center;
-}
-.img-introduce-right-4-top{
-    height: 25%;
-    width: 100%;
     color: #777777;
     font-weight: bold;
-}
-
-.img-introduce-right-4-bottom{
-    font-size: 12px;
-    height: 25%;
-    width: 100%;
-    color: #777777;
-    margin-top: 8px;
 }

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유기동물 현황</title>
+    <link rel="stylesheet" href="./resources/css/mystyle.css">
+    <link rel="stylesheet" href="./resources/css/current.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navigation">
+            <a href="./index.html">
+                <img class="logo" src="./resources/img/로고.png" alt="">
+            </a>
+            <div class="menu-box">
+                <div class="menu">
+                    <a class="menu-title" href="./introduce.html">동물보호센터</a>
+                    <div class="dropdown">
+                        <a class="dropdown-item" href="./introduce.html">동물보호센터 소개</a>
+                        <a class="dropdown-item" href="./safeprocedure.html">유기동물 보호절차</a>
+                        <a class="dropdown-item" href="./comeload.html">오시는 길</a>
+                    </div>
+                </div>
+                <div class="menu">
+                    <a class="menu-title" href="./current.html">동물보호 정보</a>
+                    <div class="dropdown">
+                        <a class="dropdown-item" href="./current.html">유기동물 현황</a>
+                        <a class="dropdown-item" href="./information.html">유기동물 보호 정보</a>
+                        <a class="dropdown-item" href="./procedure.html">입양절차</a>
+                    </div>
+                </div>
+                <div class="menu">
+                    <a class="menu-title" href="./guide.html">반려생활 길잡이</a>
+                    <div class="dropdown">
+                        <a class="dropdown-item" href="./guide.html">반려생활 길잡이</a>
+                        <a class="dropdown-item" href="./restaurant.html">반려동물 출입 식당</a>
+                        <a class="dropdown-item" href="./qna.html">자주 묻는 질문</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="banner">
+            <img class="banner-img" src="./resources/img/배너.png" alt="">
+        </section>
+        <div class="middle1">
+            <div class="mini-menu">
+                <a class="deco" href="./current.html">
+                    <div class="mini-menu-1">동물보호 정보</div>
+                </a>
+                <div class="mini-menu-2"></div>
+                <a class="deco" href="./current.html">
+                    <div class="mini-menu-3">유기동물 현황</div>
+                </a>
+                <a class="deco" href="./information.html">
+                    <div class="mini-menu-4">유기동물 보호 정보</div>
+                </a>
+                <a class="deco" href="./procedure.html">
+                    <div class="mini-menu-5">입양절차</div>
+                </a>
+            </div>
+            <div class="container-container">
+                <div class="naming">유기동물 현황</div>
+                <hr>
+                <div class="button-div">
+                    <button class="PDFbutton" id="downloadPDF"><img class="button-img"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvr5VdwU3kEoCnevFxqY_NMpVTbzP1cWLKVA&s"
+                            alt="">PDF다운로드</button>
+                </div>
+                <div id="pdfContent">
+                    <div class="chart-container">
+                        <div class="barchart">
+                            <canvas id="barChart" width="600" height="500"></canvas>
+                        </div>
+                        <div class="piechart">
+                            <canvas id="pieChart" width="336" height="500"></canvas>
+                        </div>
+                    </div>
+                    <div class="line-container">
+                        <canvas id="LineChart" width="936" height="500"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-top"></div>
+            <div class="footer-menu">
+                <a class="footer-menu-1"
+                    href="https://daejeon.go.kr/drh/DrhContentsHtmlView.do?menuSeq=2062">개인정보처리방침</a>
+                <span class="footer-menu-2">|</span>
+                <a class="footer-menu-2" href="https://daejeon.go.kr/drh/DrhContentsHtmlView.do?menuSeq=1757">영상정보처리기기
+                    운영·관리방침</a>
+                <span class="footer-menu-2">|</span>
+                <a class="footer-menu-2"
+                    href="https://daejeon.go.kr/drh/board/boardNormalList.do?boardId=homepage_0001&menuSeq=1507">누리집
+                    개선의견</a>
+                <span class="footer-menu-2">|</span>
+                <a class="footer-menu-2" href="./come-load">오시는 길</a>
+            </div>
+            <div class="footer-come">(34001) 대전광역시 유성구 금고길 7(금고동) 대전반려동물공원</div>
+            <div class="footer-come2">(34001) 대전광역시 유성구 금남구즉로 1234(금고동) 대전동물보호센터 / 대표전화 (042) 270-7239 / 팩스번호
+                (042)270-7224</div>
+            <div class="footer-menu-2">COPYRIGHT 2023 (c) DAEJEON METROPOLITAN CITY. ALL RIGHTS RESERVED.</div>
+        </footer>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+    integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.0/jspdf.umd.min.js"
+    integrity="sha512-5yTVoG0jFRsDhgYEoKrZCj5Bazxqa0VnETLN7k0SazQcARBsbgrSb6um+YpzWKNKV2kjb8bhna4fDfOk3YPr4Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var xhr = new XMLHttpRequest();
+        var url = 'http://apis.data.go.kr/6300000/animalDaejeonService/animalDaejeonList';
+        var queryParams = '?' + encodeURIComponent('serviceKey') + '=' + 'AsKsksTbcdg8cukGUyiMQU%2FawtOq%2BcmyZvZBfGoOZHhAHXweFUxP2W1ysiSuZ6Yh%2Bnsh2KIOC%2FNQDron%2BV9iBQ%3D%3D';
+        queryParams += '&' + encodeURIComponent('numOfRows') + '=' + encodeURIComponent('1000000');
+        xhr.open('GET', url + queryParams);
+
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                let xml = xhr.responseXML;
+                let items = xml.getElementsByTagName("items");
+
+                let speciesCount = { "개": 0, "고양이": 0, "기타": 0 };
+
+                for (let i = 0; i < items.length; i++) {
+                    let classification = items[i].getElementsByTagName("classification")[0].textContent;
+
+                    if (classification === "1") {
+                        speciesCount["개"]++;
+                    } else if (classification === "2") {
+                        speciesCount["고양이"]++;
+                    } else {
+                        speciesCount["기타"]++;
+                    }
+                }
+
+                drawBarChart(speciesCount);
+                drawPieChart(speciesCount);
+                drawLineChart(speciesCount);
+            } 
+        };
+
+        xhr.send();
+
+        function drawBarChart(speciesCount) {
+            let ctx = document.getElementById('barChart');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: Object.keys(speciesCount),
+                    datasets: [{
+                        label: '보호 동물 수',
+                        data: Object.values(speciesCount),
+                        backgroundColor: ['#87CEFA', '#FFB6C1', '#FFA500'],
+                        borderColor: ['#4682B4', '#FF69B4', '#FF8C00'],
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    layout: {
+                        padding: {
+                            top: 20,
+                            bottom: 100,
+                        }
+                    },
+                    responsive: false,
+                    scales: {
+                        y: { beginAtZero: true }
+                    }
+                }
+            });
+        }
+
+        function drawPieChart(speciesCount) {
+            let ctx = document.getElementById('pieChart');
+            new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: Object.keys(speciesCount),
+                    datasets: [{
+                        label: '보호 동물 수',
+                        data: Object.values(speciesCount),
+                        backgroundColor: ['#87CEFA', '#FFB6C1', '#FFA500'],
+                        borderColor: ['#4682B4', '#FF69B4', '#FF8C00'],
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    layout: {
+                        padding: {
+                            top: 20,
+                            right: 20,
+                            bottom: 20,
+                            left: 20
+                        }
+                    },
+                    responsive: false,
+                }
+            });
+        }
+
+        function drawLineChart(speciesCount) {
+            let ctx = document.getElementById('LineChart');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: Object.keys(speciesCount),
+                    datasets: [{
+                        label: '보호 동물 수',
+                        data: Object.values(speciesCount),
+                        backgroundColor: ['#87CEFA', '#FFB6C1', '#FFA500'],
+                        borderColor: ['#4682B4', '#FF69B4', '#FF8C00'],
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    layout: {
+                        padding: {
+                            top: 20,
+                            right: 20,
+                            bottom: 20,
+                            left: 20
+                        }
+                    },
+                    responsive: false,
+                }
+            });
+        }
+    });
+
+    document.getElementById("downloadPDF").addEventListener("click", () => {
+        let pdfContent = document.getElementById("pdfContent");
+
+        html2canvas(pdfContent).then((canvas) => {
+
+            let img = canvas.toDataURL("image/png");
+
+            let { jsPDF } = window.jspdf;
+            let pdf = new jsPDF("p", "mm", "a4");
+
+            let imgWidth = 190;
+
+            let canvasWidth = canvas.width;
+            let canvasHeight = canvas.height;
+            console.log(canvasWidth);  
+            console.log(canvasHeight); 
+
+            let imgHeight = canvasHeight * imgWidth / canvasWidth;
+            console.log(imgHeight);  
+            let x = 10;
+            let y = 10;
+            pdf.addImage(img, "PNG", x, y, imgWidth, imgHeight);
+
+            pdf.save("테이블.pdf");
+        });
+
+    });
+</script>
+
+</html>

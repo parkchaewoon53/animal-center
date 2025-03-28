@@ -1,38 +1,39 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    /* 모든 요소의 box-sizing을 border-box로 설정 */
 }
 
-.container {
+.container2 {
     width: 1200px;
     margin: auto;
 }
 
-.navigation {
+.navigation2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid #eeeeee;
 }
 
-.logo {
+.logo2 {
     width: 200px;
 }
 
-.menu {
+.menu2 {
     position: relative;
 }
 
-.menu:hover>.dropdown {
+.menu2:hover>.dropdown2 {
     display: block;
 }
 
-.menu-box {
+.menu-box2 {
     display: flex;
 }
 
-.menu-title {
-    /* top bottom :  28px, left and right : 32px */
+.menu-title2 {
     padding: 28px 32px;
     color: black;
     text-decoration: none;
@@ -41,7 +42,7 @@
     display: block;
 }
 
-.dropdown {
+.dropdown2 {
     position: absolute;
     width: 100%;
     background-color: white;
@@ -57,66 +58,66 @@
     z-index: 1;
 }
 
-.dropdown-item {
+.dropdown-item2 {
     color: #777777;
     text-decoration: none;
     padding: 12px;
     display: block;
 }
 
-.dropdown-item:hover{
+.dropdown-item2:hover {
     color: #0f8563;
     text-decoration: underline;
     cursor: pointer;
 }
 
-.text-bold{
+.text-bold {
     font-weight: bold;
 }
 
-.text-title{
+.text-title {
     font-size: 24px;
     margin-bottom: 30px;
 }
 
-.text-sub-title{
+.text-sub-title {
     font-size: 20px;
 }
 
-.text-sub{
+.text-sub {
     color: #777777;
 }
 
-.banner-img{
+.banner-img {
     width: 1200px;
     margin-top: 32px;
     margin-bottom: 8px;
 }
 
-.orphan-possible{
+.orphan-possible {
     margin-bottom: 16px;
 }
 
-.footer{
+.footer {
     background-color: #3B414D;
-    width: 1200px;
+    width: 100%;
     height: 120px;
     justify-content: center;
 }
 
-.footer-top{
+.footer-top {
     width: 100%;
     height: 5%;
 }
 
-.footer-menu{
+.footer-menu {
     width: 100%;
     height: 20%;
     font-size: 16px;
     margin-bottom: 12px;
 }
 
-.footer-come{
+.footer-come {
     width: 100%;
     height: 15%;
     font-size: 12px;
@@ -125,7 +126,7 @@
     margin-right: 12px;
 }
 
-.footer-come2{
+.footer-come2 {
     width: 100%;
     height: 15%;
     font-size: 12px;
@@ -135,37 +136,37 @@
     margin-bottom: 12px;
 }
 
-.footer-menu-1{
+.footer-menu-1 {
     text-decoration: none;
     color: yellow;
     margin-left: 12px;
     margin-right: 12px;
 }
 
-.footer-menu-2{
+.footer-menu-2 {
     text-decoration: none;
-    color:  #dcdcdc;
+    color: #dcdcdc;
     margin-left: 12px;
     margin-right: 12px;
 }
 
-.mini-menu{
+.mini-menu {
     margin-top: 32px;
     width: 200px;
     height: 200px;
     align-items: center;
     justify-content: center;
-    margin-right : 30px;
+    margin-right: 30px;
 }
 
-.container-container{
+.container-container2 {
     margin-left: 32px;
     margin-top: 32px;
     align-items: center;
     width: 936px;
 }
 
-.mini-menu-1{
+.mini-menu-1 {
     width: 100%;
     height: calc(100%/5);
     color: #0f8563;
@@ -174,13 +175,15 @@
     padding-left: 16px;
     cursor: pointer;
 }
-.mini-menu-2{
+
+.mini-menu-2 {
     width: 100%;
     height: calc(100%/5);
     color: black;
     font-size: 16px;
 }
-.mini-menu-3{
+
+.mini-menu-3 {
     width: 100%;
     height: calc(100%/5);
     color: #777777;
@@ -190,7 +193,8 @@
     align-items: center;
     cursor: pointer;
 }
-.mini-menu-4{
+
+.mini-menu-4 {
     width: 100%;
     height: calc(100%/5);
     color: #777777;
@@ -200,7 +204,8 @@
     align-items: center;
     cursor: pointer;
 }
-.mini-menu-5{
+
+.mini-menu-5 {
     width: 100%;
     height: calc(100%/5);
     color: #777777;
@@ -210,25 +215,28 @@
     align-items: center;
     cursor: pointer;
 }
-.mini-menu-3:hover{
+
+.mini-menu-3:hover {
     background-color: #0f8563;
     color: white;
 }
-.mini-menu-4:hover{
+
+.mini-menu-4:hover {
     background-color: #0f8563;
     color: white;
 }
-.mini-menu-5:hover{
+
+.mini-menu-5:hover {
     background-color: #0f8563;
     color: white;
 }
-.naming{
+
+.naming2 {
     font-weight: bold;
     font-size: 32px;
     height: 80px;
-    display: flex;
-    justify-content: space-between;
 }
+
 .middle1 {
     height: 80%;
     width: 100%;
@@ -238,7 +246,8 @@
 .deco {
     text-decoration: none;
 }
-.ps{
+
+.ps {
     margin-top: 20px;
     height: 60px;
     border: 1px dashed #777777;
@@ -249,12 +258,107 @@
     align-items: center;
     justify-content: center;
 }
-.small-img{
+
+.small-img {
     height: 16px;
     width: 16px;
 }
-.middle-img{
+
+.middle-img {
     margin-top: 20px;
     width: 100%;
     height: 300px;
+}
+
+.deco-acro {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    width: 100%;
+    /* 아코디언이 컨테이너 너비를 채우도록 설정 */
+}
+
+.accordion-item {
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+}
+
+.accordion-header {
+    background-color: #f9f9f9;
+    padding: 0;
+}
+
+.accordion-button {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    border: none;
+    color:  black;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.accordion-button:hover {
+    background-color: #1bc094;
+}
+
+.accordion-button.active {
+    background-color: #1bc094; /* 클릭 후 유지하고 싶은 색상 */
+}
+
+.accordion-collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.deco-acro {
+    margin-bottom: 24px;
+}
+
+.acro-memo {
+    background-color: #f9f9f9 ;
+    padding-bottom: 4px;
+    padding-left: 16px;
+    padding-top: 4px;
+}
+
+.acro-memo-memo {
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.acro-memo-memo2 {
+    padding-bottom: 4px;
+    font-size: 14px;
+}
+
+.acro-memo-memo3 {
+    margin-bottom: 4px;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.acro-memo-memo4 {
+    margin-bottom: 12px;
+    margin-top: 4px;
+    font-size: 14px;
+}
+
+.acro-memo-memo5 {
+    padding-top: 24px;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.deco2 {
+    color: black;
+    text-decoration: none;
+}
+
+.q{
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
 }
