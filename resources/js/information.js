@@ -190,7 +190,7 @@ document.querySelectorAll(".species-card").forEach(card => {
 
 function downloadExcel() {
     var xhr = new XMLHttpRequest();
-    var url = 'http://apis.data.go.kr/6300000/animalDaejeonService/animalDaejeonList';
+    var url = 'https://apis.data.go.kr/6300000/animalDaejeonService/animalDaejeonList';
     var queryParams = '?serviceKey=AsKsksTbcdg8cukGUyiMQU%2FawtOq%2BcmyZvZBfGoOZHhAHXweFUxP2W1ysiSuZ6Yh%2Bnsh2KIOC%2FNQDron%2BV9iBQ%3D%3D';
     queryParams += '&' + encodeURIComponent('pageNo') + '=' + encodeURIComponent(1);
     queryParams += '&' + encodeURIComponent('numOfRows') + '=' + encodeURIComponent(100000);
